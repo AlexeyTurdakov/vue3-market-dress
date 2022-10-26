@@ -1,15 +1,20 @@
 <template>
-  <div>hi</div>
+  <v-wrapper></v-wrapper>
 </template>
 
 <script>
+import vWrapper from "./components/v-wrapper.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    vWrapper,
+  },
 };
 </script>
 
-<style>
+<style lang="scss">
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,4 +23,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
