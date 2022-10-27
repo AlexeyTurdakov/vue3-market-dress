@@ -3,7 +3,7 @@
     <img :src="require('../assets/images/' + product_data.image)" alt="img" />
     <p>{{ product_data.name }}</p>
     <p>price: {{ Math.round(product_data.price) }}</p>
-    <button @click="sentDataToParent">add to card</button>
+    <button @click="addToCart">add to cart</button>
   </div>
 </template>
 
@@ -18,8 +18,8 @@ export default {
     },
   },
   methods: {
-    sentDataToParent() {
-      this.$emit("sendArticle", this.product_data.article);
+    addToCart() {
+      this.$emit("addToCart", this.product_data);
     },
   },
 };

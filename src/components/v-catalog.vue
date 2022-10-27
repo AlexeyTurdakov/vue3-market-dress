@@ -4,7 +4,7 @@
       v-for="item in PRODUCTS"
       :key="item.article"
       v-bind:product_data="item"
-      @sendArticle="showChildrenArticle"
+      @addToCart="addToCart"
     ></v-item>
   </div>
 </template>
@@ -18,13 +18,13 @@ export default {
     vItem,
   },
 
-    methods: {
-      ...mapActions(["GET_PRODUCTS_FROM_API"]),
+  methods: {
+    ...mapActions(["GET_PRODUCTS_FROM_API", "ADD_TO_CART"]),
 
-      showChildrenArticle(data) {
-        console.log(data);
-      }
+    addToCart(data) {
+      this.ADD_TO_CART(data);
     },
+  },
 
   mounted() {
     this.GET_PRODUCTS_FROM_API();
