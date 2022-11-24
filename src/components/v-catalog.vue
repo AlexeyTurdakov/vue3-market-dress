@@ -28,6 +28,8 @@ export default {
 
   mounted() {
     this.GET_PRODUCTS_FROM_API();
+
+   
   },
 
   computed: {

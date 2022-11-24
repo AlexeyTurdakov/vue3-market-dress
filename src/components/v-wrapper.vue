@@ -26,6 +26,7 @@ export default {
     ...mapGetters(["CART"]),
   },
   methods: {},
+  
   watch: {},
 };
 </script>

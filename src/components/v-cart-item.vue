@@ -11,10 +11,10 @@
       <p>{{ cart_item_data.article }}</p>
     </div>
     <div class="v-cart-item__quantity">
-      <p>Qty:{{ cart_item_data.quantity }}</p>
+      <p>Qty:</p>
       <span class="quantity__tools">
         <span class="quantity__btn" @click="decrementItem">-</span>
-        {{ cart_item_data.quantity }}
+        {{ count }}
         <span class="quantity__btn" @click="incrementItem">+</span>
       </span>
     </div>
@@ -35,7 +35,7 @@ export default {
 
   data() {
     return {
-      count: 0,
+      count: this.cart_item_data.quantity,
     };
   },
 
@@ -52,7 +52,6 @@ export default {
       this.$emit("deleteFromCart");
     },
   },
-
 };
 </script>
 
