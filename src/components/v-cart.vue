@@ -35,6 +35,7 @@ export default {
 
     ...mapActions(["DELETE_FROM_CART"]),
   },
+  
 };
 </script>
 
